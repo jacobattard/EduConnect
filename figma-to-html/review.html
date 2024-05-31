@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .review-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+        }
+
+        header h2 {
+            font-size: 18px;
+            color: #666;
+            margin: 10px 0 0;
+        }
+
+        .tutor-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .tutor-image {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tutor-surname {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .locality {
+            color: #888;
+            margin: 5px 0 0;
+        }
+
+        .rating {
+            margin-bottom: 20px;
+        }
+
+        .star {
+            font-size: 1.5em;
+            color: #FFD700;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .experience {
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="review-container">
+        <header>
+            <h1>EduConnect</h1>
+            <h2>Write your review</h2>
+        </header>
+        <div class="tutor-info">
+            <img src="./images/v2089_70.png" alt="Tutor Image" class="tutor-image">
+            <div class="info">
+                <p class="tutor-surname">Mr Borg</p>
+                <p class="locality">Naxxar</p>
+            </div>
+        </div>
+        <form>
+            <div class="rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+            <div class="experience">
+                <label for="experience">Describe your experience</label>
+                <textarea id="experience" name="experience" rows="4" placeholder="Enter your question or message"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const value = star.getAttribute('data-value');
+                    stars.forEach(s => {
+                        if (s.getAttribute('data-value') <= value) {
+                            s.innerHTML = '&#9733;'; // filled star
+                        } else {
+                            s.innerHTML = '&#9734;'; // empty star
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
