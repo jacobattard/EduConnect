@@ -6,7 +6,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   margin: 0;
-  background: rgba(247, 247, 247, 1);
+  background: rgb(255, 255, 255);
 }
 
 .container {
@@ -59,6 +59,10 @@ body {
 .v2001_1467 {
   font-weight: medium;
   font-size: 48px;
+}
+
+.v2001_1467:hover {
+  text-decoration: none;
 }
 
 .v2001_1447,

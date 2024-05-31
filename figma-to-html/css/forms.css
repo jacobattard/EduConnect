@@ -11,6 +11,11 @@ body {
   font-size: 48px;
   color: rgba(0, 74, 173, 1);
 }
+
+.logo:hover {
+  text-decoration: none;
+}
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -29,4 +34,8 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+#SubmitButton {
+  width: 100%;
 }
