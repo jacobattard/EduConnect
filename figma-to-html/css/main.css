@@ -1,3 +1,14 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container img {
+  height: 80px; /* Adjust the height as needed */
+  margin-right: 10px; /* Adjust the spacing between the logo and text */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,12 +17,11 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   margin: 0;
-  background: rgb(255, 255, 255);
+  background-color: rgb(240, 238, 238);
 }
 
 .container {
-  max-width: 1200px;
-  background: rgba(255, 255, 255, 1);
+  max-width: 80%;
   opacity: 1;
   padding: 20px;
   margin: 20px auto;
@@ -34,15 +44,15 @@ body {
 }
 
 .img-fluid {
-  width: 100%;
   border-radius: 8px;
+  width: 70%;
 }
 
 .v2001_1444,
 .v2001_1450,
 .v2001_1456,
 .v2001_1467 {
-  color: rgba(0, 74, 173, 1);
+  color: #008037;
 }
 
 .v2001_1444,
@@ -63,6 +73,7 @@ body {
 
 .v2001_1467:hover {
   text-decoration: none;
+  color: #008037
 }
 
 .v2001_1447,
@@ -73,15 +84,20 @@ body {
 }
 
 .btn {
-  background: rgba(255, 144, 64, 1);
+  background: #008037;
   border: none;
 }
 
 .btn:hover {
-  background: rgba(255, 123, 45, 1);
+  background: #005f27;
 }
 
 .v2001_1455,
 .v2001_1449 {
   margin: 20px 0;
+}
+
+.section-paragraph {
+  font-size: 16px;
+  color: #000; /* Set text color to black */
 }
