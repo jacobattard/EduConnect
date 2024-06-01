@@ -6,9 +6,17 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet" /> <!-- Link to the external CSS file -->
     <title>EduConnect</title>
+    <style>
+        .find-tutor-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
 </head>
 
-<body> 
+<body>
     <div class="container">
         <div class="row text-center mb-4">
             <div class="col-12">
@@ -81,6 +89,11 @@
             </div> <!-- End new row for Becoming a Student (inverted) -->
         </div>
     </div>
+
+    <a href="findTutor.html" class="btn btn-primary find-tutor-btn">Find a Tutor</a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
